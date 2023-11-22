@@ -1,8 +1,5 @@
 from bs4 import BeautifulSoup
-soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
-print(soup.prettify())
 import requests
-# from bs4 import BeautifulSoup
 
 def scrape_website(url):
     # Send a GET request to the URL
@@ -27,14 +24,14 @@ def scrape_website(url):
         print('\nHeadings are: (1st 10)\n')
         for idx, heading in enumerate(headings[:10], start=1):
             print(f'{idx}. {heading}')
-            
+           
          # Printing ist 10 paragraphs of the website
         print('\nParagraphs are: (1st 10)\n' )
         for idx, paragraph in enumerate(paragraphs[:10], start=1):
             print(f'{idx}. {paragraph}')
-            
+           
          # Printing all the tags used inthe website
-         
+        
         print("\nAll tags used are\n") 
         tag_list=[]
         for tag in soup.find_all(True):
@@ -50,3 +47,10 @@ def scrape_website(url):
 
 # enter your url here
 scrape_website("https://en.wikipedia.org/wiki/2023_Cricket_World_Cup")
+
+#
+#In this code, we function called `scrape_website` that takes a URL as an argument. The function sends a GET request to the URL and checks if the request was successful. If the request was successful, it parses the HTML content of the page using BeautifulSoup.
+#
+#The function then extracts information from the parsed HTML based on specific HTML tags and structures. In this case, we extract the title of the webpage, the text of the first 10 headings, the text of the first 10 paragraphs, and the text of the first 10 links.
+#
+#Finally, the function prints the extracted information..</s>
