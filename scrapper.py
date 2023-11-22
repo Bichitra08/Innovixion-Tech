@@ -46,7 +46,7 @@ def scrape_website(url):
         print(f'Error: Unable to fetch the webpage. Status Code: {response.status_code}')
 
 # enter your url here
-scrape_website("https://en.wikipedia.org/wiki/2023_Cricket_World_Cup")
+scrape_website("https://www.geeksforgeeks.org/python-web-scraping-tutorial/")
 
 #
 #In this code, we function called `scrape_website` that takes a URL as an argument. The function sends a GET request to the URL and checks if the request was successful. If the request was successful, it parses the HTML content of the page using BeautifulSoup.
